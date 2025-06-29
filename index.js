@@ -1,17 +1,76 @@
-let newButton = document.createElement("button");
-newButton.innerText="Clicked Me";
-let doc = document.querySelector("body");
-doc.append(newButton);
-newButton.style.color = "Yellow";
-newButton.style.backgroundColor = "black";
-console.log(newButton);
+let htmlBody = document.body;
+console.log(htmlBody);
 
-let para = document.createElement("p");
-para.setAttribute("class","paragraph");
+ htmlBody.style.backgroundColor = "black";
 
-para.innerText = "Hello i am new here";
-doc.append(para);
-console.log(para);
 
-let innerBody = document.querySelectorAll(".Main-1")[0];
-innerBody.classList.add("newClass");
+htmlBody.addEventListener("click" ,function(){
+
+    let color = htmlBody.style.backgroundColor;
+
+
+
+    if(color == "black"){
+
+
+        htmlBody.style.backgroundColor = "blue";
+        console.log("run black condition")
+    }
+    else if(color == "blue"){
+        console.log(htmlBody.style.backgroundColor)
+
+        htmlBody.style.backgroundColor = "black";
+        console.log("run blue condition")
+    }
+   
+})
+
+let btn = document.querySelector(".btn-click");
+
+btn.addEventListener("click", function(event){
+
+    console.log(event);
+    console.log(event.clientX, event.clientY);
+    console.log(event.type);
+    console.log(event.target)
+
+
+})
+
+
+
+let alert1 =  () => {
+
+    alert("")
+};
+
+btn.removeEventListener("click", alert1);
+
+
+let valueOfString = [1,2,3,4,5,6,7];
+
+for(let val of valueOfString){
+
+if(val !== " "){
+console.log("The value of string is" , val)
+}
+
+}
+
+
+let inLoop = {
+
+name : "Muhammad Younus",
+age : 12,
+section: "B",
+isPass : true
+}
+
+console.log("For-In-Loop");
+for(let val in inLoop){
+
+
+console.log("The in loop value",val, ":" , inLoop[val]);
+
+}
+
