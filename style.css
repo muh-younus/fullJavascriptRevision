@@ -1,0 +1,13 @@
+.Main-1{
+
+    height: 100px;
+    width: 100px;
+    border: 5px solid black;
+    margin: 5px;
+}
+
+.newClass{
+
+    background-color: yellow;
+    width: 100%;
+}
